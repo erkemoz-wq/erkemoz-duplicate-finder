@@ -38,7 +38,7 @@
 2. Windows **"Bilgisayarınız Windows tarafından korundu"** derse **Ek bilgi → Yine de çalıştır**'a tıkla. Program henüz ücretli bir kod imzalama sertifikasıyla imzalı olmadığı için bu uyarı çıkabilir.
 
 ### Gizlilik
-Taradığın dosyaların adı, içeriği ya da konumu hiçbir yere gönderilmez. Kaç bilgisayarda kurulu olduğunu saymak için yalnız **rastgele bir kurulum numarası, sürüm ve arayüz dili** gönderilir. Ayarlar sekmesindeki **"Anonim kullanım istatistiği gönder"** kutusunu kapatırsan hiçbir şey gönderilmez.
+Taradığın dosyaların adı, içeriği ya da konumu hiçbir yere gönderilmez. Kaç bilgisayarda kurulu olduğunu ve ne kadar kullanıldığını saymak için yalnızca **rastgele bir kurulum numarası, sürüm, arayüz dili ve programın açık olup olmadığı** bilgisi gönderilir; sunucu IP adresini kaydetmez. Ayarlar sekmesindeki **"Anonim kullanım istatistiği gönder"** kutusunun işaretini kaldırırsan hiçbir şey gönderilmez.
 
 ### Bilmen gerekenler
 - Kısayollar, bağlantılar (junction), sistem dosyaları ve buluttan indirilmemiş dosyalar taranmaz. Windows, Program Files, AppData gibi klasörler varsayılan olarak dışlanır.
@@ -63,7 +63,7 @@ Taradığın dosyaların adı, içeriği ya da konumu hiçbir yere gönderilmez.
 2. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**. This can appear because the app is not yet signed with a paid code-signing certificate.
 
 ### Privacy
-The names, contents and locations of the files you scan are never sent anywhere. To count how many computers it is installed on, the app sends only **a random install ID, the version and the interface language**. Uncheck **"Send anonymous usage statistics"** on the Settings tab and nothing is sent.
+The names, contents and locations of the files you scan are never sent anywhere. To count how many computers it is installed on and how much it is used, the app sends only **a random installation number, the version, the interface language and whether the app is running**; the server does not store your IP address. Uncheck **"Send anonymous usage statistics"** on the Settings tab and nothing is sent.
 
 ### Good to know
 - Shortcuts, links (junctions), system files and cloud files that aren't downloaded are not scanned. Folders such as Windows, Program Files and AppData are excluded by default.
