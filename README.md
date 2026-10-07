@@ -27,23 +27,23 @@
 
 ### Neler yapar
 - Seçtiğin klasörlerde (alt klasörler dahil) **birebir aynı** dosyaları bulur; adları, tarihleri, konumları farklı olsa da içerikten tanır.
-- Üç aşamalı eleme: boyut → dosya uçları → tam içerik (BLAKE2b). Aynı çıkanlar bayt bayt aynıdır.
-- Her gruptan **en az bir kopya mutlaka korunur**. Hangi kopyanın kalacağını sen seçersin (akıllı / en eski / en yeni ya da tek tık).
-- Silinenler **Geri Dönüşüm Kutusu**'na ya da **karantina klasörüne** gider — kalıcı silme yok.
+- Üç aşamalı eleme: boyut → dosyanın başı ve sonu → tam içerik (BLAKE2b). Aynı çıkanlar bayt bayt aynıdır.
+- Her gruptan **en az bir kopya mutlaka korunur**. Hangi kopyanın kalacağını sen seçersin: Akıllı, En eski ya da En yeni kuralıyla ya da tek tek.
+- Temizlenen dosyalar **Geri Dönüşüm Kutusu**'na ya da **karantina klasörüne** gider; hiçbir dosya kalıcı olarak silinmez.
 - Her tarama ve temizlik için Excel raporu; hangi dosyanın nereye gittiği kayıtlı.
 - 8 dil, açık ve koyu tema. Yeni sürüm çıkınca program haber verir ve tek tıkla güncellenir.
 
 ### Kurulum
 1. Yukarıdaki bağlantıdan kurulum dosyasını indir ve çalıştır.
-2. Windows **"Bilgisayarınız Windows tarafından korundu"** derse **Ek bilgi → Yine de çalıştır**'a tıkla. Program henüz ücretli bir kod imzalama sertifikasıyla imzalı olmadığı için bu uyarı çıkabilir.
+2. Windows **"Bilgisayarınız korundu"** (SmartScreen) derse **Ek bilgi → Yine de çalıştır**'a tıkla. Bu uyarı, program henüz ücretli bir kod imzalama sertifikasıyla imzalanmadığı için çıkabilir.
 
 ### Gizlilik
 Taradığın dosyaların adı, içeriği ya da konumu hiçbir yere gönderilmez. Kaç bilgisayarda kurulu olduğunu ve ne kadar kullanıldığını saymak için yalnızca **rastgele bir kurulum numarası, sürüm, arayüz dili ve programın açık olup olmadığı** bilgisi gönderilir; sunucu IP adresini kaydetmez. Ayarlar sekmesindeki **"Anonim kullanım istatistiği gönder"** kutusunun işaretini kaldırırsan hiçbir şey gönderilmez.
 
 ### Bilmen gerekenler
 - Kısayollar, bağlantılar (junction), sistem dosyaları ve buluttan indirilmemiş dosyalar taranmaz. Windows, Program Files, AppData gibi klasörler varsayılan olarak dışlanır.
-- Tarama sonrasında değişen dosya silinmez, atlanır ve raporlanır.
-- Program makine koduna derlenir ve her açılışta kendi dosyalarının mührünü denetler; değiştirilmiş bir kopya açılmaz. **Yalnız bu sayfadaki resmi sürümü indir.**
+- Taramadan sonra değişen bir dosya temizlenmez; atlanır ve raporda gösterilir.
+- Program makine koduna derlenir ve her açılışta kendi dosyalarının mührünü denetler; değiştirilmiş bir kopya açılmaz. **Yalnızca bu sayfadaki resmi sürümü indir.**
 - 🛡 Her sürüm yayınlanırken otomatik olarak **VirusTotal**'da taranır; raporun linki ve sonucu [sürüm notunda](https://github.com/erkemoz-wq/erkemoz-duplicate-finder/releases/latest) yazar. Bazen yapay zekâ tahminiyle tarayan tek tük bir motor imzasız programlara yanlış alarm verebilir.
 
 ---
@@ -52,9 +52,9 @@ Taradığın dosyaların adı, içeriği ya da konumu hiçbir yere gönderilmez.
 
 ### Features
 - Finds **byte-identical** files in the folders you choose (including subfolders), even if their names, dates or locations differ.
-- Three-step filtering: size → file ends → full content (BLAKE2b). Matches are identical byte for byte.
-- **At least one copy of every group is always kept.** You choose which one stays (smart / oldest / newest, or one click).
-- Removed files go to the **Recycle Bin** or a **quarantine folder** — nothing is deleted permanently.
+- Three-step filtering: size → start and end of the file → full content (BLAKE2b). Matches are identical byte for byte.
+- **At least one copy of every group is always kept.** You choose which one stays: with the Smart, Oldest or Newest rule, or one by one.
+- Removed files go to the **Recycle Bin** or a **quarantine folder**; nothing is deleted permanently.
 - An Excel report for every scan and cleanup records where each file went.
 - 8 languages, light and dark theme. The app tells you when a new version is out and updates with one click.
 
@@ -67,7 +67,7 @@ The names, contents and locations of the files you scan are never sent anywhere.
 
 ### Good to know
 - Shortcuts, links (junctions), system files and cloud files that aren't downloaded are not scanned. Folders such as Windows, Program Files and AppData are excluded by default.
-- A file that changed after the scan is never removed; it is skipped and reported.
+- A file that changed after the scan is never removed; it is skipped and listed in the report.
 - The app is compiled to native code and verifies its own files on every start; a modified copy will not run. **Only download the official release from this page.**
 - 🛡 Every release is automatically scanned on **VirusTotal**; the report link and result are in the [release notes](https://github.com/erkemoz-wq/erkemoz-duplicate-finder/releases/latest). Occasionally a single ML-based engine may false-flag unsigned apps.
 
